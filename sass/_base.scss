@@ -1,13 +1,184 @@
 @import url('http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather');
 @import url('http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css');
 
+* {
+  @include box-sizing(border-box);
+}
+
+.headerText {
+  text-align: center;
+}
+
+.footerText{
+  text-align: center;
+  color: #ffffff;
+}
+
+footer {
+  @include headerfooter-style;
+
+}
+
+body{
+  margin: 0;
+  padding-top: 400px;
+}
+
+header {
+  @include headerfooter-style;
+  height: 400px;
+
+}
+
+.main, .Navigation {
+  position: relative;
+}
+
+.Navigation{
+  height: 80px;
+  background: $game-grey;
+  z-index: 150;
+  margin-bottom: -80px;
+
+}
 
 h1 {
   font-size: 2.2rem;
-  color: lighten($orange, 25);
+  color:  #ffffff;
 }
 
-.test {
-  font-size: 1.2rem;
-  color: $blue;
+
+
+#GameVideo{
+  height: 400px;
+  background: $game-brown;
+  width: 100%;
+  overflow: hidden;
 }
+
+#GameVideo ul{
+  display: inline-block;
+  width: 9999px;
+  height: 400px;
+  padding: 0;
+  margin: 0;
+}
+
+#GameVideo ul li {
+  width: 1440px;
+  height: 400px;
+  text-align: center;
+  list-style-type: none;
+  float: left;
+}
+
+.pic-info {
+  height: 400px;
+  float: left;
+  width: 600px;
+  margin-top: 150px;
+  margin-left: 100px;
+}
+
+#GameVideo ul li img{
+  height: 400px;
+  width: 400px;
+  float: right;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+#Portfolio{
+  height: 5in;
+  background: #ffffff;
+}
+
+#About{
+  height: 4in;
+  background: darken($game-red, 5);
+}
+
+#Contact{
+  height: 5in;
+  background: #ffffff;
+}
+
+header, .Navigation-Scrolled{
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+}
+
+.Navigation, .nav-heading h1 {
+  transition: all 1s;
+  -moz-transition: all 1s; /* Firefox 4 */
+  -webkit-transition: all 1s; /* Safari and Chrome */
+  -o-transition: all 1s; /* Opera */
+}
+
+.Navigation-Scrolled{
+  height: 60px;
+}
+
+.main {
+  padding-top: 60px;
+}
+
+.nav-heading, .nav-links {
+  float: left;
+}
+
+.nav-heading-shrink h1{
+  padding-top: 20px !important;
+}
+
+.nav-heading h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.nav-heading{
+  width: 33.33%;
+}
+
+.nav-links {
+  width: 66.66%;
+  text-align: left;
+}
+
+.nav-links ul {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  @include vertically-center;
+
+}
+
+.nav-links ul li {
+  font-size: 1.5rem;
+  color: #ffffff;
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.nav-links ul li a{
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px 10px 10px 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nav-selected {
+  background: $border-radius-color;
+
+}
+
+
+

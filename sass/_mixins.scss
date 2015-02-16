@@ -1,0 +1,19 @@
+
+@mixin horizontally-center {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  display: block;
+}
+
+@mixin vertically-center{
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+@mixin headerfooter-style {
+  background: darken($game-green, 4);
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
