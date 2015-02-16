@@ -56,7 +56,12 @@ h1 {
   overflow: hidden;
 }
 
-#GameVideo ul{
+#carousel{
+  height: 400px;
+  width: 1440px;
+}
+
+#GameVideo div ul{
   display: inline-block;
   width: 9999px;
   height: 400px;
@@ -64,7 +69,7 @@ h1 {
   margin: 0;
 }
 
-#GameVideo ul li {
+#GameVideo div ul li {
   width: 1440px;
   height: 400px;
   text-align: center;
@@ -80,7 +85,7 @@ h1 {
   margin-left: 100px;
 }
 
-#GameVideo ul li img{
+#GameVideo div ul li img{
   height: 400px;
   width: 400px;
   float: right;
