@@ -59,6 +59,8 @@ h1 {
 #carousel{
   height: 400px;
   width: 1440px;
+  overflow: hidden;
+  @include horizontally-center();
 }
 
 #GameVideo div ul{
