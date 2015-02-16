@@ -60,7 +60,8 @@ h1 {
   height: 400px;
   width: 1440px;
   overflow: hidden;
-  @include horizontally-center();
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #GameVideo div ul{
