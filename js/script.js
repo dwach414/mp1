@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
     var carouselFunc = setInterval(function(){
-        $("#GameVideo div ul").animate({marginLeft:-$(window).width()},1000,function(){
+        $("#GameVideo div ul").animate({marginLeft:-1440},1000,function(){
             $(this).find("li:last").after($(this).find("li:first"));
             $(this).css({marginLeft:0});
         })
