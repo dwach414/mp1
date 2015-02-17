@@ -1,5 +1,5 @@
 @import url('http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather');
-@import url('http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css');
+@import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
 
 * {
   @include box-sizing(border-box);
@@ -47,13 +47,32 @@ h1 {
   color:  #ffffff;
 }
 
+#right-arrow{
+  position:absolute;
+  top: 200px;
+  right: 20px;
+  cursor: pointer;
+  
+}
+
+#left-arrow{
+  position:relative;
+  top: 200px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.arrow-container{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 
 
 #GameVideo{
   height: 400px;
   background: $game-brown;
   width: 100%;
-  overflow: hidden;
 }
 
 #carousel{
@@ -66,7 +85,7 @@ h1 {
 
 #GameVideo div ul{
   display: inline-block;
-  width: 9999px;
+  width: 4320px;
   height: 400px;
   padding: 0;
   margin: 0;
@@ -88,6 +107,19 @@ h1 {
   margin-left: 100px;
 }
 
+
+.pic-info h1{
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: lighten($game-green, 4);
+}
+
+.pic-info p{
+  color: darken(#ffffff, 2);
+  font-size: 1.2rem;
+
+}
+
 #GameVideo div ul li img{
   height: 400px;
   width: 400px;
@@ -102,8 +134,43 @@ h1 {
 }
 
 #About{
-  height: 4in;
-  background: darken($game-red, 5);
+  height: 5in;
+  background: darken($game-brown, 2);
+  column-count: 3;
+}
+
+#column-container{
+  width: 100%;
+  height: 5in;
+  list-style: none;
+  display: table;
+}
+
+#column-container li{
+  display: table-cell;
+  vertical-align: middle;
+  width: 33%;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+[class^="fa-"], [class*=" fa-"] {
+  display: inline-block;
+  width: 100%;
+}
+
+#column-container li h1, #column-container li i, #column-container li p{
+  text-align: center;
+}
+
+#column-container li i{
+  color: $game-green;
+  margin-bottom: 20px;
+}
+#column-container li p{
+  color: gainsboro;
+  margin-top: 20px;
+  line-height: 30px;
 }
 
 #Contact{

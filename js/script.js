@@ -1,12 +1,35 @@
 
-$(document).ready(function(){
-    var carouselFunc = setInterval(function(){
-        $("#GameVideo div ul").animate({marginLeft:-1440},1000,function(){
-            $(this).find("li:last").after($(this).find("li:first"));
-            $(this).css({marginLeft:0});
-        })
-    },5000);
+//$(document).ready(function(){
+//    var carouselFunc = setInterval(function(){
+//        $("#GameVideo div ul").animate({marginLeft:-1440},1000,function(){
+//            $(this).find("li:last").after($(this).find("li:first"));
+//            $(this).css({marginLeft:0});
+//        })
+//    },10000);
+//});
+
+var carouselposition = 0;
+$("#left-arrow").click(function(){
+    if(carouselposition > 0) {
+        $("#GameVideo div ul").animate({marginLeft: '+=' + 1440 + 'px'}, 1000, function () {
+
+        });
+        --carouselposition;
+    }
 });
+
+$("#right-arrow").click(function(){
+    if(carouselposition < 2) {
+        $("#GameVideo div ul").animate({marginLeft: '-=' + 1440 + 'px'}, 1000, function () {
+
+        });
+        ++carouselposition;
+    }
+
+});
+
+
+
 
 var navigation = $(".Navigation");
 var headerHeight = $(".main-header").outerHeight(true);
