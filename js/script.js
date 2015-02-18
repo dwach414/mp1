@@ -1,33 +1,45 @@
 
-//$(document).ready(function(){
-//    var carouselFunc = setInterval(function(){
-//        $("#GameVideo div ul").animate({marginLeft:-1440},1000,function(){
-//            $(this).find("li:last").after($(this).find("li:first"));
-//            $(this).css({marginLeft:0});
-//        })
-//    },10000);
-//});
 
-var carouselposition = 0;
+var carouselposition = 1;
 $("#left-arrow").click(function(){
-    if(carouselposition > 0) {
+    if(carouselposition > 1) {
         $("#GameVideo div ul").animate({marginLeft: '+=' + 1440 + 'px'}, 1000, function () {
 
         });
         --carouselposition;
+        $("#selector" + carouselposition).addClass("fa-circle");
+        $("#selector" + carouselposition).removeClass("fa-circle-o");
+        $("#selector" + (carouselposition+1)).addClass("fa-circle-o");
+        $("#selector" + (carouselposition+1)).removeClass("fa-circle");
+
     }
 });
 
 $("#right-arrow").click(function(){
-    if(carouselposition < 2) {
+    if(carouselposition < 3) {
         $("#GameVideo div ul").animate({marginLeft: '-=' + 1440 + 'px'}, 1000, function () {
 
         });
         ++carouselposition;
+        $("#selector" + carouselposition).addClass("fa-circle");
+        $("#selector" + carouselposition).removeClass("fa-circle-o");
+        $("#selector" + (carouselposition-1)).removeClass("fa-circle");
+        $("#selector" + (carouselposition-1)).addClass("fa-circle-o");
     }
 
 });
 
+
+$("#sprite-pic, #image-layover i").click(function(){
+    $(".modal-container").css({visibility: "visible"}).animate({opacity: 1}, 500);
+});
+
+$(".modal-container").click(function(){
+    $(".modal-container").animate({opacity: 0}, 500);
+    setTimeout(function(){
+        $(".modal-container").css({visibility: "hidden"});
+    }, 500);
+});
 
 
 
@@ -51,7 +63,6 @@ $(window).scroll(function(){
     var portfolioPos = $("#Portfolio").offset().top - scrollTop - navBarHeight;
     var aboutPos = $("#About").offset().top - scrollTop - navBarHeight;
     var contactPos = $("#Contact").offset().top - scrollTop - navBarHeight;
-    console.log($("#GameVideo").offset().top - scrollTop);
     if( gameVideoPos  >= minScrollPos && gameVideoPos < maxScrollPos){
         $("#gamevideo-link").addClass("nav-selected");
         $("#portfolio-link").removeClass("nav-selected");
@@ -76,6 +87,12 @@ $(window).scroll(function(){
         $("#contact-link").addClass("nav-selected");
 
     }
+    if(scrollTop > 1100){
+        $("#sprite-sheet-background").css({visibility: "visible"});
+    } else {
+        $("#sprite-sheet-background").css({visibility: "hidden"});
+    }
+
 
 });
 

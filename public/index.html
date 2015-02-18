@@ -7,7 +7,11 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 <header class="main-header">
-    <h1 class="headerText">Winning Combo</h1>
+    <h1 class="headerText">Winning Combo Presents</h1>
+    <video loop autoplay id="video">
+        <source src="/images/wizardsvideo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 </header>
 <nav class="Navigation">
     <div class="nav-heading">
@@ -18,13 +22,13 @@
     <div class="nav-links">
         <ul>
             <li>
-                <a id="gamevideo-link" >GameVideo</a>
+                <a id="gamevideo-link" >Dimension</a>
             </li>
             <li>
-                <a id="portfolio-link">Portfolio</a>
+                <a id="portfolio-link">Sprites</a>
             </li>
             <li>
-                <a id="about-link" >About</a>
+                <a id="about-link" >Team</a>
             </li>
             <li>
                 <a id = "contact-link" >Contact</a>
@@ -36,11 +40,17 @@
     </div>
 </nav>
 <body>
+    <img id="sprite-sheet-background" src="/images/Rooftops.jpg">
     <div class="main">
         <div id="GameVideo">
             <div class="arrow-container">
                 <h1 id="left-arrow"><</h1>
                 <h1 id="right-arrow">></h1>
+            </div>
+            <div id="selector-container">
+                <i id="selector1" class="fa fa-circle"></i>
+                <i id="selector2" class="fa fa-circle-o"></i>
+                <i id="selector3"class="fa fa-circle-o"></i>
             </div>
             <div id="carousel">
             <ul>
@@ -78,6 +88,26 @@
 
         </div>
         <div id="Portfolio">
+            <div id="sprite-sheet">
+                <div class="table-center">
+                    <h1>
+                        Current Sprite Sheet
+                    </h1>
+                    <p>
+                        This is our current sprite sheet. We have borrowed this from another game, but the style is correct. We intend to
+                        create our own based of this style as soon as we can hire a graphic designer.
+                    </p>
+                </div>
+                <div id="image-layover">
+                    <i class="fa fa-plus-square fa-3x"></i>
+                    <img src="/images/sprites.png" id="sprite-pic" class="table-center">
+                </div>
+            </div>
+            <div id="modal-sprite-sheet" class="modal-container">
+                <div id="picture-background">
+                    <img src="/images/sprites.png">
+                </div>
+            </div>
         </div>
         <div id="About">
             <ul id="column-container">
@@ -113,7 +143,17 @@
 
 
         </div>
-        <div id="Contact"></div>
+        <div id="Contact">
+            <h1>
+                Contact Us By Social Media
+            </h1>
+            <div id="social-media-icons">
+                <i class="fa fa-facebook-square fa-5x"></i>
+                <i class="fa fa-twitter-square fa-5x"></i>
+                <i class="fa fa-google-plus-square fa-5x"></i>
+                <i class="fa fa-tumblr-square fa-5x"></i>
+            </div>
+        </div>
     </div>
   <script src="lib/jquery-2.1.3.min/index.js"></script>
   <script src="js/script.js"></script>

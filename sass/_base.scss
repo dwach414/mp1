@@ -5,28 +5,55 @@
   @include box-sizing(border-box);
 }
 
+#sprite-sheet-background{
+  position: fixed;
+  top:0;
+  width: 100%;
+  visibility: hidden;
+}
+
 .headerText {
-  text-align: center;
+  top: 10px;
+  position: absolute;
+  left: 38vw;
+}
+
+#video{
+  height: auto;
+  width: auto;
+  position: fixed; right: 0; top:0;
+  min-width: 1440px; min-height: 500px;
+  z-index: -10;
 }
 
 .footerText{
   text-align: center;
   color: #ffffff;
+  height: 100%;
+  background: darken($game-green, 4);
+  @include vertical-align;
+  padding-top: .3in;
 }
 
 footer {
-  @include headerfooter-style;
+  z-index: 10;
+  height: .75in;
+  margin: 0;
+  bottom: 0;
+  padding: 0;
 
 }
 
 body{
   margin: 0;
-  padding-top: 400px;
+  padding-top: 500px;
+  width: 100%;
+  height: 100%;
 }
 
 header {
   @include headerfooter-style;
-  height: 400px;
+  height: 500px;
 
 }
 
@@ -47,18 +74,29 @@ h1 {
   color:  #ffffff;
 }
 
+#selector-container{
+  left: 50vw;
+  position: absolute;
+  bottom:10px;
+}
+#selector1, #selector2, #selector3{
+  display: inline;
+}
+
 #right-arrow{
   position:absolute;
   top: 200px;
   right: 20px;
   cursor: pointer;
+  z-index: 100;
   
 }
 
 #left-arrow{
-  position:relative;
+  position:absolute;
   top: 200px;
   left: 20px;
+  z-index: 100;
   cursor: pointer;
 }
 
@@ -73,11 +111,12 @@ h1 {
   height: 400px;
   background: $game-brown;
   width: 100%;
+  position: relative;
 }
 
 #carousel{
   height: 400px;
-  width: 1440px;
+  width: 100vw;
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
@@ -85,14 +124,14 @@ h1 {
 
 #GameVideo div ul{
   display: inline-block;
-  width: 4320px;
+  width: 300vw;
   height: 400px;
   padding: 0;
   margin: 0;
 }
 
 #GameVideo div ul li {
-  width: 1440px;
+  width: 100vw;
   height: 400px;
   text-align: center;
   list-style-type: none;
@@ -128,10 +167,90 @@ h1 {
   margin-left: 100px;
 }
 
+
+
 #Portfolio{
   height: 5in;
-  background: #ffffff;
+  background: darken($game-green, 5);
 }
+
+.modal-container{
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  padding: 50px 50px 50px 50px;
+  width: 100%;
+  height: 100%;
+  z-index: 150;
+  background: $translucent-white;
+  cursor: pointer;
+}
+
+.modal-container div{
+
+  height: 100%;
+  z-index: 200;
+
+}
+
+.modal-container div img{
+  display: block;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 500;
+  background: #ffffff;
+  border: 20px solid #ffffff;
+  border-radius: 25px;
+}
+
+#sprite-sheet{
+  display: table;
+  @include vertical-align;
+}
+
+#sprite-sheet div h1, #sprite-sheet div p{
+  margin-bottom: 50px;
+  color: #ffffff;
+  text-align: center;
+}
+
+#sprite-sheet div p{
+  font-size: 20px;
+}
+#image-layover{
+  position: relative;
+}
+
+#image-layover img{
+  background: #ffffff;
+  padding: 0;
+  cursor: pointer;
+  width: auto;
+}
+
+#image-layover i{
+  width: 50px;
+  z-index: 50;
+  position: absolute;
+  color: #ffffff;
+  opacity: .8;
+  left: 24vw;
+  top: 40%;
+  cursor: pointer;
+}
+
+.table-center{
+  display: table-cell;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  width: 50%;
+}
+
 
 #About{
   height: 5in;
@@ -141,14 +260,13 @@ h1 {
 
 #column-container{
   width: 100%;
-  height: 5in;
   list-style: none;
   display: table;
+  @include vertical-align;
 }
 
 #column-container li{
   display: table-cell;
-  vertical-align: middle;
   width: 33%;
   padding-right: 20px;
   padding-left: 20px;
@@ -175,7 +293,29 @@ h1 {
 
 #Contact{
   height: 5in;
-  background: #ffffff;
+}
+
+#Contact h1{
+  margin-top: 100px;
+  font-size: 3rem;
+  text-align: center;
+  color: $game-green;
+}
+
+#social-media-icons{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 240px;
+  @include vertical-align;
+}
+
+
+#social-media-icons i{
+  display: inline;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: darken($game-green, 10);
 }
 
 header, .Navigation-Scrolled{
