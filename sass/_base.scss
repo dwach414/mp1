@@ -1,8 +1,17 @@
 @import url('http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather');
 @import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+@import url(http://fonts.googleapis.com/css?family=Roboto);
 
 * {
   @include box-sizing(border-box);
+}
+
+h1{
+  font-family: 'Roboto', sans-serif;
+}
+
+p{
+  line-height: 2em;
 }
 
 #sprite-sheet-background{
@@ -33,6 +42,7 @@
   background: darken($game-green, 4);
   @include vertical-align;
   padding-top: .3in;
+  line-height: normal;
 }
 
 footer {
@@ -139,11 +149,12 @@ h1 {
 }
 
 .pic-info {
-  height: 400px;
+  display: block;
   float: left;
-  width: 600px;
-  margin-top: 150px;
-  margin-left: 100px;
+  width: 50vw;
+  padding-right: 5vw;
+  padding-left: 5vw;
+  @include vertical-align;
 }
 
 
@@ -162,9 +173,9 @@ h1 {
 #GameVideo div ul li img{
   height: 400px;
   width: 400px;
-  float: right;
-  margin-right: 100px;
-  margin-left: 100px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 
