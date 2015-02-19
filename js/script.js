@@ -87,7 +87,7 @@ $(window).scroll(function(){
         $("#contact-link").addClass("nav-selected");
 
     }
-    if(scrollTop > 1100){
+    if(scrollTop > 900){
         $("#sprite-sheet-background").css({visibility: "visible"});
     } else {
         $("#sprite-sheet-background").css({visibility: "hidden"});
